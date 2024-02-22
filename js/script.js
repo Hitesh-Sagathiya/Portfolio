@@ -52,6 +52,20 @@ tl.from(".left h1", {
     
 })
 
+tl.from('.menu',{
+
+
+
+    x:30,
+
+    opacity:0,
+
+    
+
+}
+
+)
+
 tl.from(".right ul li", {
     y:-40,
     delay:.2,
