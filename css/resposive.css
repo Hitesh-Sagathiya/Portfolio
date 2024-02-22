@@ -1,0 +1,53 @@
+@media screen and (max-width:672px) {
+    
+   .menu{
+    display: block;
+   }
+/* -------------------------------------- */
+   .right{
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60%;
+    transform: translateX(-500px);
+    transition: .6s;
+
+   }
+   
+   .right.active {
+       transform: translateX(0px);
+   }
+/* --------------------------- */
+   .right ul {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10px;
+    
+    display: block;
+    text-align: center;
+    
+   }
+
+   .right ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #dadada;
+    
+   }
+   .lifirst {
+       border-top: 1px solid #dadada;
+   }
+   
+
+    .home {
+        flex-direction: column;
+    }
+
+    .skill .lists {
+        flex-direction: column;
+        padding: 0 90px;
+    }
+
+   
+}

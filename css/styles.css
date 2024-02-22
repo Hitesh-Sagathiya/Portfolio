@@ -1,0 +1,424 @@
+@font-face {
+    font-family: main;
+    src: url('../fonts/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: sec;
+    src: url('../fonts/Poppins-Medium.ttf')
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+}
+
+
+
+hr{
+    border: 0.1px solid #FCA311;
+}
+
+.main{
+    overflow: hidden;
+    background-color: #14213D;
+}
+/* -----------------------scroll bar------------------ */
+
+
+/* ----------------------Header--------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #2b3b5f;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 0 30px;
+
+   
+    
+}
+
+.menu {
+    display: none;
+}
+
+.menu img {
+    width: 35px;
+
+}
+
+.left a {
+    color: white;
+    text-decoration: none;
+    font-family: main;
+    font-size: 3.5rem;
+    
+    position: relative;
+    padding-bottom: 5px;
+    
+    
+}
+
+
+
+
+
+
+.left a::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(245, 99, 55, 0.945);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.3s;
+    transform-origin: left;
+}
+
+.left a:hover::after {
+    transform: scaleX(1);
+
+
+}
+
+
+
+
+
+.right ul {
+    display: flex;
+    
+
+}
+
+.right ul li {
+    list-style: none;
+    padding: 0 40px;
+}
+
+.right ul li a {
+
+    text-decoration: none;
+    color: white;
+    font-family: sec;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+
+
+.right ul li a::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #FCA311;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: .6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+}
+
+
+.right ul li a:hover::after{
+
+    transform: scaleX(1);
+
+
+}
+
+
+
+
+/* -------------------------loader--------------------------------- */
+
+
+.loader{
+    background-color: #FCA311;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loader h1{
+    font-size: 100px;
+    font-family: main;
+    color: #27375a;
+}
+
+
+
+/* -----------------------------home section--------------------------- */
+
+.home{
+    
+    padding: 80px 80px;
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+    overflow: hidden;
+    
+}
+
+
+
+.home .mytext h1{
+    font-family: sec;
+    color: white;
+    font-size: 400%;
+    margin-top: 1%;
+    padding: 30px 0;
+    
+}
+.home .mytext h1 span{
+    color: #FCA311;
+}
+.home .mytext p{
+    font-family: sec;
+    color: white;
+    font-size: 200%;
+    
+}
+.pad{
+    margin-bottom: 10% !important;
+}
+
+
+/* ----------------------------------------------------------- */
+.home .mytext a{
+    font-family: sec;
+    text-decoration: none;
+    color: white;
+    background-color: #FCA311;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    transition: .3s;
+    overflow: hidden;  
+    z-index: 4;
+    font-size: 150%;
+}
+
+.home .mytext a span{
+    color: #14213D;
+    position: relative;
+    z-index: 3;
+}
+
+
+
+
+
+.home .mytext a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 125%;
+    background-color: white;
+    bottom: -50px;
+    left: 0;
+    transform: translate(-95px , -1px) rotate(55deg);
+
+    
+    transition: .2s ease-in;
+
+    
+}
+.icon img{
+   filter: drop-shadow(0 8px 30px rgb(207, 235, 240));
+   width: 100%;
+}
+
+
+
+
+.home .mytext a:hover::before{
+   
+
+    transform: translate(100px , -85px) rotate(55deg);
+    
+
+}
+
+.home .mytext a:hover{
+
+        box-shadow: 0 5px 15px #ffffff;
+       
+        
+}
+
+
+/* --------------------------SKills---------------------  */
+
+.skill{
+    height: 800px;
+    padding: 50px;
+}
+.skill h1{
+    padding-top: 1%;
+    padding-left: 30px;
+    font-family: sec;
+    font-size: 4rem;
+    cursor: pointer;
+    color: #FCA311;
+    position: relative;
+    
+   
+    
+}
+
+
+.skill .lists{
+    padding-top: 110px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.skill .lists ul li{
+    list-style: none;
+    font-family: sec;
+    color: white;
+    font-size: 3rem;
+    padding: 25px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.skill .lists ul #html::before{
+    content: "";
+    background-image: url(../images/html.png);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: -50px;
+    background-size: cover;
+    
+
+}
+.skill .lists ul #css::before{
+    content: "";
+    background-image: url(../images/css.png);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: -50px;
+    background-size: cover;
+    
+
+}
+.skill .lists ul #js::before{
+    content: "";
+    background-image: url(../images/js.png);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: -50px;
+    background-size: cover;
+    
+
+}
+.skill .lists ul #btst::before{
+    content: "";
+    background-image: url(../images/bootstrap.png);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: -50px;
+    background-size: cover;
+    
+
+}
+
+.skill p{
+    color: #FCA311;
+    font-family: sec;
+    padding-top: 20%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+
+
+/* ------------------------------contact--------------------------- */
+
+
+.contact{
+    height: 650px ;
+    color: white;
+    font-family: sec;
+    padding-top: 10px;
+    
+    
+}
+
+.contact h1{
+    font-size: 4rem;
+    padding-left: 80px;
+    margin-top: 100px;
+    color: #FCA311;
+    
+}
+
+
+
+.contact .para {
+    padding-top: 10%;
+}
+
+.contact .para p{
+    font-size: 200%;
+    text-align: center;
+    
+   
+    
+    
+}
+
+
+footer{
+    font-family: sec;
+    background-color: #27375a;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer p span{
+    color: #FCA311;
+}
+
+
+
+
